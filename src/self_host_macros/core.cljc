@@ -2,8 +2,9 @@
     #?(:clj
        (:require [net.cgrand.macrovich :as macros])
      :cljs
-       (:require-macros [net.cgrand.macrovich :as macros]
-        [self-host-macros.core :refer [dbg]]))) 
+       (:require-macros
+           [net.cgrand.macrovich :as macros]
+           [self-host-macros.core :refer [dbg]]))
    )
    
 (macros/deftime
