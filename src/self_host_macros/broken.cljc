@@ -1,5 +1,5 @@
 (ns self-host-macros.broken
-   (:require-macros [self-host-macros.core :refer [dbg]]))
+   (:require-macros [self-host-macros.broken :refer [dbg]]))
    
    
 (defmacro dbg[x]
