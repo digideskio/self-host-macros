@@ -1,7 +1,7 @@
 (ns self-host-macros.broken
-   (:require-macros [self-host-macros.broken :refer [dbg]]))
+  #?(:cljs (:require-macros [self-host-macros.broken :refer [dbg]])))
    
-   
+#?(:cljs (enable-console-print!))
 (defmacro dbg[x]
 `(let [x# ~x]
    (println (str '~x ": " x#))
