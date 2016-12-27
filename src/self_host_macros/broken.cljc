@@ -10,4 +10,5 @@
  (defn arithmetic [a b]
     (* a (dbg (+ a b))))
 
- (dbg (map inc [1 2 3]))
+ #?(:clj (dbg "clojure")
+    :cljs (dbg "clojurescript"))
