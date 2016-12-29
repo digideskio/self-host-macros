@@ -1,5 +1,5 @@
 (ns self-host-macros.broken
-  (:require [self-host-macros.foo])
+  (:require [self-host-macros.foo :as foo])
   #?(:cljs (:require-macros [self-host-macros.broken :refer [dbg]])))
    
 #?(:cljs (enable-console-print!))
@@ -9,7 +9,7 @@
    x#))
 
  (defn arithmetic [a b]
-    (* (foo a) (dbg (+ a b))))
+    (* (foo/foo a) (dbg (+ a b))))
 
  #?(:clj (dbg "clojure")
     :cljs (dbg "clojurescript"))
