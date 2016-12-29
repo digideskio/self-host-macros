@@ -1,6 +1,8 @@
 (ns self-host-macros.core
-    #?(:clj
-       (:require [net.cgrand.macrovich :as macros])
+    (:require 
+          #?(:clj [net.cgrand.macrovich :as macros])
+        [self-host-macros.foo :as foo]
+        )
      :cljs
        (:require-macros
            [net.cgrand.macrovich :as macros]
@@ -17,7 +19,7 @@
 
 (macros/usetime
    (defn arithmetic [a b]
-      (* a (dbg (+ a b))))
+      (* (foo/foo a) (dbg (+ a b))))
    
 )
 
